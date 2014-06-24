@@ -18,8 +18,8 @@
       <h3>Customers</h3>
       <table>
         <tr ng-repeat="cust in customers | filter:searchText">
-          <td>{{ cust }}</td>
-          <td></td>
+          <td>{{ cust.name }}</td>
+          <td>{{ cust.total | currency}}</td>
         </tr>
       </table>
     </div>
