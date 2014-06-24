@@ -6,7 +6,7 @@
     <script src="js/lib/angular-route.js"></script>
     <script src="js/lib/angular-animate.js"></script>
   </head>
-<body ng-init ="customers=['Ted','Tim','Michelle', 'Zed']">
+<body ng-init ="customers=['Zed','Tim','Michelle', 'Ted']">
     <div>
       <label>Name:</label>
       <input type="text" ng-model="yourName" placeholder="Enter a name here">
@@ -20,7 +20,7 @@
       <br />
       <h3>Customers</h3>
       <table>
-        <tr ng-repeat="cust in customers">
+        <tr ng-repeat="cust in customers | filter:searchText">
           <td>{{ cust }}</td>
           <td></td>
         </tr>
